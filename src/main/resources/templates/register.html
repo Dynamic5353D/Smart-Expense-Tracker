@@ -114,18 +114,7 @@
 								<div class="p-conf">Number Verified</div>
 
 								<div id="recaptcha-container" style="margin-top:20px; margin-bottom:20px;"></div>
-								<input type="button" class="btn badge-pill btn-custom" value="Send OTP"
-									onclick="phoneAuth()" id="sendotp">
-							</div>
-
-							<div class="form-group" id="verifier" style="display: none;">
-								<label for="exampleInputEmail1">Enter OTP</label> <input type="number"
-									class="form-control" id="otpverify" aria-describedby="emailHelp" name="otpverify"
-									pattern="^[0-9]{1,6}$" title="6 digit OTP"
-									onKeyPress="if(this.value.length==6) return false;"> <br>
-								<input type="button" class="btn badge-pill btn-custom" value="Verify"
-									onclick="codeverify()">
-								<div class="n-conf">Incorrect OTP</div>
+								
 							</div>
 
 
@@ -173,7 +162,7 @@
 
 							<div class="form-group text-center">
 								<button type="submit" class="btn btn-md btn-custom" id="submitbtn"
-									title="Verify your phone number to register" disabled>Register</button>
+									 >Register</button>
 							</div>
 							<div class="form-group text-center">
 								<p>
@@ -188,9 +177,8 @@
 		</div>
 		<script type="module" th:src="@{/js/register.js}"></script>
 		<script type="module" th:inline="javascript">
-			import {phoneAuth, codeverify, render, phoneChange, validate} from /*[[@{/js/register.js}]]*/
+			import {phoneAuth, render, phoneChange, validate} from /*[[@{/js/register.js}]]*/
 			window.phoneAuth = phoneAuth;
-			window.codeverify = codeverify;
 			window.phoneChange = phoneChange;
 			window.validate = validate;
 			window.addEventListener("load", phoneChange);

@@ -12,14 +12,14 @@ import {
 	signInWithPhoneNumber,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 const firebaseConfig = {
-	apiKey: "AIzaSyBrJ5HUMleKRQq7DzW5Vy12uaPHd95LHMg",
-	authDomain: "otp-verification-app-56d91.firebaseapp.com",
-	projectId: "otp-verification-app-56d91",
-	storageBucket: "otp-verification-app-56d91.appspot.com",
-	messagingSenderId: "488853124474",
-	appId: "1:488853124474:web:d44937fcb49ef6bf1f12c3",
-	measurementId: "G-Q12EVN4RG8",
-};
+	apiKey: "AIzaSyAiKCnkcSJz3u66ZDK27ctPdfYFiaLXplw",
+	authDomain: "dynamic-e7eb4.firebaseapp.com",
+	projectId: "dynamic-e7eb4",
+	storageBucket: "dynamic-e7eb4.firebasestorage.app",
+	messagingSenderId: "558406815258",
+	appId: "1:558406815258:web:9244fca0dae4687c350ba3",
+	measurementId: "G-WSTM164PMZ"
+  };
 
 const firebase = initializeApp(firebaseConfig);
 const auth = getAuth();
