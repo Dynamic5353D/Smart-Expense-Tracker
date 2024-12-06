@@ -69,27 +69,7 @@ function validate() {
 var validnum = [];
 
 //checking if code is verified
-function codeverify() {
-	var code = document.getElementById("otpverify").value;
 
-	confirmationResult
-		.confirm(code)
-		.then(function() {
-			console.log("OTP matched");
-			document.getElementById("recaptcha-container").style.display = "none";
-			document.getElementById("sendotp").style.display = "none";
-			document.getElementById("verifier").style.display = "none";
-			document.getElementsByClassName("p-conf")[0].style.display = "block";
-			validnum.push(document.getElementById('phone').value);
-			document.getElementById("submitbtn").disabled = false;
-			document.getElementById("submitbtn").title = "";
-			document.getElementById("otpverify").value = "";
-		})
-		.catch(function() {
-			document.getElementsByClassName("p-conf")[0].style.display = "none";
-			document.getElementsByClassName("n-conf")[0].style.display = "block";
-		});
-}
 
 
 function phoneChange() {
@@ -108,9 +88,7 @@ function phoneChange() {
 			return true;
 		}
 	}
-	document.getElementById("submitbtn").disabled = true;
-	document.getElementById("submitbtn").title = "Verify number before you register";
-	document.getElementById("sendotp").style.display = "block";
+
 	document.getElementById("recaptcha-container").style.display = "block";
 	document.getElementsByClassName("p-conf")[0].style.display = "none";
 }
@@ -118,4 +96,4 @@ function phoneChange() {
 
 
 window.addEventListener("load", phoneChange);
-export { phoneAuth, codeverify, render, phoneChange, validate };
+export { render, phoneChange, validate };
